@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ApiClient.Services
 {
-    // https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
     public interface ITaxCalculatorService
     {
         Task<TaxRateLocation> GetRateByLocation(string zip);
@@ -27,7 +26,7 @@ namespace ApiClient.Services
             _logger = logger;
         }
 
-        public async Task<TaxRateLocation> GetRateByLocation(string zip) // TODO: parameter could eventually become a whole class with parameters from https://developers.taxjar.com/api/reference/#get-show-tax-rates-for-a-location
+        public async Task<TaxRateLocation> GetRateByLocation(string zip)
         {
             try
             {
