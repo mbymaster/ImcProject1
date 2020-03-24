@@ -26,7 +26,7 @@ namespace ApiClient.Tests
             var mockLogger = new Mock<ILogger<TaxCalculatorService>>();
             ILogger<TaxCalculatorService> logger = mockLogger.Object;
 
-            var TaxJar = new TaxCalculator(config["TaxCollectors:TaxJar:BaseUrl"], config["TaxCollectors:TaxJar:Authorization"]);
+            var TaxJar = new TaxCalculator(config["TaxCalculators:TaxJar:BaseUrl"], config["TaxCalculators:TaxJar:Authorization"]);
             _taxService = new TaxCalculatorService(TaxJar, logger);
         }
 
