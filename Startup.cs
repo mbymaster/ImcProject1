@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ImcProject1.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,12 @@ namespace ImcProject1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1
+            services.AddHttpClient("TaxJar", c =>
+            {
+                c.BaseAddress = new Uri(Configuration["HttpService:BaseUrl"]);
+                c.DefaultRequestHeaders.Add("Authorization", Configuration["HttpService:Authorization"]);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
