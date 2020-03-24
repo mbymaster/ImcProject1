@@ -36,6 +36,8 @@ namespace ApiClient.Controllers
 
         }
 
+
+        // TODO: add taxjar service that adds up all the tax and returns a tax ActionResult<TaxSumViewModel> instead, incorporate into stratgy pattern
         [HttpGet("location/{zip}")]
         public async Task<ActionResult<TaxRateLocation>> GetTaxRateByZip(string zip)
         {
@@ -55,6 +57,7 @@ namespace ApiClient.Controllers
 
         }
 
+        // TODO: add taxjar service that adds up all the tax and returns a tax ActionResult<TaxSumViewModel> instead, incorporate into stratgy pattern
         [HttpGet("order/{id}")]
         public async Task<ActionResult<TaxRateOrder>> GetTaxRateByOrderId(string id)
         {
