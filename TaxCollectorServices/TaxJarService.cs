@@ -6,14 +6,14 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace ImcProject1.Services
+namespace ImcProject1.TaxCollectorServices
 {
-    public class TaxJarHttpService : IHttpService
+    public class TaxJarService : IHttpService
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger _logger;
 
-        public TaxJarHttpService(IHttpClientFactory clientFactory, ILogger logger)
+        public TaxJarService(IHttpClientFactory clientFactory, ILogger logger)
         {
             _httpClient = clientFactory.CreateClient("TaxJar");
             _logger = logger;

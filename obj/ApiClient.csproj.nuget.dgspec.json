@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Development\\IMC\\ImcProject1\\ApiClient.csproj": {}
+    "C:\\Development\\IMC\\TaxCollectorService\\ApiClient.csproj": {}
   },
   "projects": {
-    "C:\\Development\\IMC\\ImcProject1\\ApiClient.csproj": {
+    "C:\\Development\\IMC\\TaxCollectorService\\ApiClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\IMC\\ImcProject1\\ApiClient.csproj",
+        "projectUniqueName": "C:\\Development\\IMC\\TaxCollectorService\\ApiClient.csproj",
         "projectName": "ApiClient",
-        "projectPath": "C:\\Development\\IMC\\ImcProject1\\ApiClient.csproj",
+        "projectPath": "C:\\Development\\IMC\\TaxCollectorService\\ApiClient.csproj",
         "packagesPath": "C:\\Users\\Matt\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\IMC\\ImcProject1\\obj\\",
+        "outputPath": "C:\\Development\\IMC\\TaxCollectorService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matt\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,10 +41,6 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.1, )"
-            },
-            "RestSharp": {
-              "target": "Package",
-              "version": "[106.10.1, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

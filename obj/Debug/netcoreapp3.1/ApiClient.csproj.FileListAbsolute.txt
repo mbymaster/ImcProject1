@@ -104,3 +104,8 @@ C:\Development\IMC\ImcProject1\obj\Debug\netcoreapp3.1\staticwebassets\ApiClient
 C:\Development\IMC\ImcProject1\obj\Debug\netcoreapp3.1\ApiClient.dll
 C:\Development\IMC\ImcProject1\obj\Debug\netcoreapp3.1\ApiClient.pdb
 C:\Development\IMC\ImcProject1\obj\Debug\netcoreapp3.1\ApiClient.genruntimeconfig.cache
+C:\Development\IMC\TaxCollectorService\obj\Debug\netcoreapp3.1\ApiClient.csproj.CoreCompileInputs.cache
+C:\Development\IMC\TaxCollectorService\obj\Debug\netcoreapp3.1\ApiClient.MvcApplicationPartsAssemblyInfo.cache
+C:\Development\IMC\TaxCollectorService\obj\Debug\netcoreapp3.1\ApiClient.AssemblyInfoInputs.cache
+C:\Development\IMC\TaxCollectorService\obj\Debug\netcoreapp3.1\ApiClient.AssemblyInfo.cs
+C:\Development\IMC\TaxCollectorService\obj\Debug\netcoreapp3.1\ApiClient.csprojAssemblyReference.cache

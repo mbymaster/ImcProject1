@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qLUAIqMW5GLi6b8921dTyOVyn1rq3EtnGzuVrIhqqR2SsTtCEUX/5ceTPSzhaoRlGqoLautyYwSTGnJiHaD2Zg==",
+  "dgSpecHash": "x/vQeimo8eUOoIvCpEFFElWQ7cr0wT0y/mn+yz5EIpZpD7q9YUN4ZqkE+aspYdBgrdtIext43EZf1Fblx4WWEQ==",
   "success": true,
-  "projectFilePath": "C:\\Development\\IMC\\ImcProject1\\ApiClient.csproj",
+  "projectFilePath": "C:\\Development\\IMC\\TaxCollectorService\\ApiClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matt\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.0.0\\microsoft.aspnetcore.hosting.abstractions.2.0.0.nupkg.sha512",
     "C:\\Users\\Matt\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.0.0\\microsoft.aspnetcore.hosting.server.abstractions.2.0.0.nupkg.sha512",
@@ -46,7 +46,6 @@
     "C:\\Users\\Matt\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Matt\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Matt\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
-    "C:\\Users\\Matt\\.nuget\\packages\\restsharp\\106.10.1\\restsharp.106.10.1.nupkg.sha512",
     "C:\\Users\\Matt\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Matt\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Matt\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

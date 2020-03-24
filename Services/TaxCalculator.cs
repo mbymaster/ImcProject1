@@ -1,5 +1,6 @@
 ﻿using ImcProject1.Abstractions;
 using ImcProject1.Models;
+using ImcProject1.TaxCollectorServices;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
@@ -10,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace ImcProject1.Services
 {
-    public class TaxCalculator // <T>, Reference the GetRate(string addOnUrl, string parameter) method
+    public class TaxCalculator
     {
-        private readonly TaxJarHttpService _httpService;
+        private readonly TaxJarService _httpService;
         private readonly ILogger _logger;
 
-        public TaxCalculator(TaxJarHttpService httpService, ILogger logger)
+        public TaxCalculator(TaxJarService httpService, ILogger logger)
         {
             _httpService = httpService;
             _logger = logger;
@@ -61,24 +62,5 @@ namespace ImcProject1.Services
 
         }
 
-        // TODO: was thinking of way to call this using generics
-        //public async Task<T> GetRate(string addOnUrl, string parameter)
-        //{
-        //    try
-        //    {
-        //        var url = addOnUrl + parameter;
-        //        var httpResponseMessage = await _httpService.GetAsync(url);
-        //        using var responseStream = await httpResponseMessage.Content.ReadAsStreamAsync();
-        //        var taxRateT = await JsonSerializer.DeserializeAsync<T>(responseStream);
-
-        //        return taxRateT;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogInformation(ex.Message);
-        //        throw;
-        //    }
-        //
-        //}
     }
 }
