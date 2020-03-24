@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
-using ImcProject1.Abstractions;
+using ApiClient.Models;
 using ImcProject1.Models;
 using ImcProject1.Services;
-using ImcProject1.TaxCollectorServices;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace ImcProject1.Controllers
@@ -16,13 +13,12 @@ namespace ImcProject1.Controllers
     [ApiController]
     public class TaxCalculatorController : ControllerBase
     {
+        private readonly IConfiguration _config;
         private readonly ILogger _logger;
-        private readonly TaxCalculator _taxCalculator;
 
-        public TaxCalculatorController(IHttpClientFactory clientFactory, ILogger<TaxCalculatorController> logger)
+        public TaxCalculatorController(IConfiguration config, ILogger<TaxCalculatorController> logger)
         {
-            var taxJar = new TaxJarService(clientFactory, logger);
-            _taxCalculator = new TaxCalculator(taxJar, logger);
+            _config = config;
             _logger = logger;
         }
 
@@ -46,7 +42,10 @@ namespace ImcProject1.Controllers
         {
             try
             {
-                var taxRateLocation = await _taxCalculator.GetRateByLocation(zip);
+                var taxCalculator = new TaxCalculator(_config["TaxCollectors:TaxJar:BaseUrl"], _config["TaxCollectors:TaxJar:Authorization"]);
+                var userId = Request.Headers["UserId"];
+                var taxService = new TaxService(taxCalculator, _logger);
+                var taxRateLocation = await taxService.GetRateByLocation(zip);
                 return Ok(taxRateLocation);
             }
             catch (Exception ex)
@@ -62,7 +61,10 @@ namespace ImcProject1.Controllers
         {
             try
             {
-                var taxRateOrder = await _taxCalculator.GetRateByOrder(id);
+                var taxCalculator = new TaxCalculator(_config["TaxCollectors:TaxJar:BaseUrl"], _config["TaxCollectors:TaxJar:Authorization"]);
+                var userId = Request.Headers["UserId"];
+                var taxService = new TaxService(taxCalculator, _logger);
+                var taxRateOrder = await taxService.GetRateByOrder(id);
                 return Ok(taxRateOrder);
             }
             catch (Exception ex)
