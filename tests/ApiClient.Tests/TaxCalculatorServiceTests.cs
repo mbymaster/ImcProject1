@@ -37,6 +37,7 @@ namespace ApiClient.Tests
             Assert.NotNull(taxRateLocation);
             Assert.Equal("90404", taxRateLocation.Zip);
             Assert.Equal("CA", taxRateLocation.State);
+
         }
 
         [Fact]
@@ -46,6 +47,7 @@ namespace ApiClient.Tests
             Assert.NotNull(taxRateOrder);
             Assert.Equal(142698, taxRateOrder.User_Id);
             Assert.Equal("12-34243-9", taxRateOrder.Line_Items[0].Product_Identifier);
+
         }
     }
 }

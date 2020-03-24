@@ -57,6 +57,7 @@ namespace ApiClient.Tests
             var taxRateLocation = (TaxRateLocation)ok.Value;
             Assert.Equal("90404", taxRateLocation.Zip);
             Assert.Equal("CA", taxRateLocation.State);
+
         }
 
         [Fact]
