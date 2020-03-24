@@ -37,9 +37,6 @@ namespace ApiClient.Services
                 var request = new RestRequest(addOnUrl, DataFormat.Json);
                 request.AddHeader("Authorization", _authorization);
                 var locationResponse = await _restClient.GetAsync<LocationResponse>(request);
-                //var httpResponseMessage = await _httpService.GetAsync(addOnUrl);
-                //var response = await httpResponseMessage.Content.ReadAsStringAsync();
-                //var locationResponse = JsonConvert.DeserializeObject<LocationResponse>(response);
 
                 return locationResponse.Rate;
             }
@@ -61,9 +58,6 @@ namespace ApiClient.Services
                 var request = new RestRequest(addOnUrl, DataFormat.Json);
                 request.AddHeader("Authorization", _authorization);
                 var orderResponse = await _restClient.GetAsync<OrderResponse>(request);
-                //var httpResponseMessage = await _httpService.GetAsync(addOnUrl);
-                //var response = await httpResponseMessage.Content.ReadAsStringAsync();
-                //var orderResponse = JsonConvert.DeserializeObject<OrderResponse>(response);
 
                 return orderResponse.Order;
             }

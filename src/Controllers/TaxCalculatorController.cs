@@ -43,7 +43,7 @@ namespace ApiClient.Controllers
             {
                 var taxCalculator = new TaxCalculator(_config["TaxCollectors:TaxJar:BaseUrl"], _config["TaxCollectors:TaxJar:Authorization"]);
                 //var userId = Request.Headers["UserId"];
-                var taxService = new TaxService(taxCalculator, _logger);
+                var taxService = new TaxCalculatorService(taxCalculator, _logger);
                 var taxRateLocation = await taxService.GetRateByLocation(zip);
                 return Ok(taxRateLocation);
             }
@@ -62,7 +62,7 @@ namespace ApiClient.Controllers
             {
                 var taxCalculator = new TaxCalculator(_config["TaxCollectors:TaxJar:BaseUrl"], _config["TaxCollectors:TaxJar:Authorization"]);
                 //var userId = Request.Headers["UserId"];
-                var taxService = new TaxService(taxCalculator, _logger);
+                var taxService = new TaxCalculatorService(taxCalculator, _logger);
                 var taxRateOrder = await taxService.GetRateByOrder(id);
                 return Ok(taxRateOrder);
             }
