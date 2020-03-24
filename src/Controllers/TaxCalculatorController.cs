@@ -21,6 +21,7 @@ namespace ApiClient.Controllers
             _logger = logger;
         }
 
+        // For dev only
         [HttpGet]
         public IActionResult Index()
         {

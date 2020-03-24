@@ -18,6 +18,7 @@ namespace ApiClient.Services
         private readonly string _authorization;
         private readonly ILogger _logger;
 
+        // TODO: Inject IRestRequest(?) and IRestResponse(?) into constructor for moq and unit tests
         public TaxCalculatorService(TaxCalculator taxCalculator, ILogger logger)
         {
 

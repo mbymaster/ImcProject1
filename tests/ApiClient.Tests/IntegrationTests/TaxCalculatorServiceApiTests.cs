@@ -10,13 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace ApiClient.Tests
+namespace ApiClient.Tests.IntegrationTests
 {
-    public class TaxCalculatorServiceTests
+    public class TaxCalculatorServiceApiTests
     {
         private readonly TaxCalculatorService _taxService;
 
-        public TaxCalculatorServiceTests()
+        public TaxCalculatorServiceApiTests()
         {
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())

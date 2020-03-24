@@ -9,14 +9,14 @@ using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace ApiClient.Tests
+namespace ApiClient.Tests.IntegrationTests
 {
-    public class TaxCalculatorControllerTests
+    public class TaxCalculatorApiControllerTests
     {
 
         private readonly TaxCalculatorController _controller;
 
-        public TaxCalculatorControllerTests()
+        public TaxCalculatorApiControllerTests()
         {
             var config = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
